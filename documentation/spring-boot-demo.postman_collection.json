@@ -1,0 +1,58 @@
+{
+	"info": {
+		"_postman_id": "2fce6d07-d83b-4087-b166-1339dda4b904",
+		"name": "spring-boot-demo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get-All-Users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/spring-boot-user/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"spring-boot-user",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create_user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\": \"c0d69638-431c-4a4a-8312-a94c52f83f99\",\r\n    \"name\": \"Trishit\",\r\n    \"role\": \"user\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/spring-boot-user/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"spring-boot-user",
+						"users"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
