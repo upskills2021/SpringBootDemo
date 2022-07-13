@@ -1,0 +1,37 @@
+- Create Restful webservices on User CRUD operation:
+---------------------------------------------------------------
+
+- Create User:
+  -------------------
+  base-url: http://localhost:8082
+  uri -> /spring-boot-user/users
+  Operation: Create
+  HTTP method: POST
+  Request payload: 
+   {
+    "user_id": "c0d69638-431c-4a4a-8312-a94c52f83f99",
+    "name": "Trishit",
+    "role": "user"
+
+   }
+
+  Response Status: 201
+  Response Body: Nothing
+
+
+- Get All Users:
+--------------------
+  base-url: http://localhost:8082
+  uri -> /spring-boot-user/users
+  Operation: Get
+  HTTP method: GET
+  Request payload: Nothing
+  Response Status: 200
+  Response Body: 
+   [
+    {
+        "name": "Trishit",
+        "role": "user",
+        "user_id": "c0d69638-431c-4a4a-8312-a94c52f83f99"
+    }
+   ]
