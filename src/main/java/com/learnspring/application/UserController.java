@@ -7,9 +7,11 @@ import com.learnspring.domain.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.apache.commons.collections4.CollectionUtils;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import javax.validation.Valid;
 import java.net.URI;
 import java.util.List;
 
@@ -28,7 +30,7 @@ public class UserController {
         return ResponseEntity.ok().body(users);
     }
     @PostMapping("/users")
-    public ResponseEntity createUser(@RequestBody UserDTO userDTO) {
+    public ResponseEntity createUser(@Valid @RequestBody  UserDTO userDTO) {
         UserEntity entity = Mappers.fromDto(userDTO);
         UserEntity savedUser = userService.saveUser(entity);
         URI location = ServletUriComponentsBuilder
@@ -37,5 +39,9 @@ public class UserController {
                 .buildAndExpand(savedUser.getId())
                 .toUri();
         return ResponseEntity.created(location).build();
+    }
+    @GetMapping("users/{id}")
+    public ResponseEntity<?> retrieveUser(@PathVariable long id) {
+        return ResponseEntity.ok(userService.findUserById(id));
     }
 }

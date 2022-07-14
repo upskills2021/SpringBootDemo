@@ -5,16 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="df415c9d-8be2-40db-afef-d63cfef0d386" name="Changes" comment="ppt">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/learnspring/domain/mapper/Mappers.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/learnspring/domain/persistance/entity/UserEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/learnspring/domain/persistance/repository/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/learnspring/domain/exception/ExceptionResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/learnspring/domain/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/learnspring/domain/exception/UserNotFoundException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/learnspring/application/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learnspring/application/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/learnspring/domain/dto/UserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learnspring/domain/dto/UserDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/learnspring/domain/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learnspring/domain/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,6 +71,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
@@ -83,6 +82,10 @@
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Asus\Documents\UPSkills\CoreJava\lectures\corejava\SpringBootDemo\documentation" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.learnspring.config" />
+      <recent name="com.learnspring.domain.exception" />
     </key>
   </component>
   <component name="RunManager">
@@ -159,17 +162,17 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/learnspring/domain/service/UserService.java</url>
-          <line>22</line>
+          <line>23</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/learnspring/application/UserController.java</url>
-          <line>31</line>
+          <line>33</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/learnspring/application/UserController.java</url>
-          <line>23</line>
+          <line>25</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>

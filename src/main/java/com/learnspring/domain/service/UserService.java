@@ -1,6 +1,7 @@
 package com.learnspring.domain.service;
 
 import com.learnspring.domain.dto.UserDTO;
+import com.learnspring.domain.exception.UserNotFoundException;
 import com.learnspring.domain.mapper.Mappers;
 import com.learnspring.domain.persistance.entity.UserEntity;
 import com.learnspring.domain.persistance.repository.UserRepository;
@@ -24,5 +25,8 @@ public class UserService {
 
     public UserEntity saveUser(UserEntity userEntity) {
         return userRepository.save(userEntity);
+    }
+    public UserEntity findUserById(long id) {
+        return userRepository.findById(id).orElseThrow(() -> new UserNotFoundException("User not found with id :: " + id));
     }
 }
