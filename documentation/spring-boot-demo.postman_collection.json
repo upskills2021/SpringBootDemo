@@ -32,7 +32,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"user_id\": \"c0d69638-431c-4a4a-8312-a94c52f83f99\",\r\n    \"name\": \"Trishit\",\r\n    \"role\": \"user\"\r\n\r\n}",
+					"raw": "{\r\n    //\"user_id\": \"c0d69638-431c-4a4a-8312-a94c52f83f99\",\r\n    \"name\": \"Trishit\",\r\n    \"role\": \"user\"\r\n\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -49,6 +49,67 @@
 					"path": [
 						"spring-boot-user",
 						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUserById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/spring-boot-user/users/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"spring-boot-user",
+						"users",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user_versioning",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-API-VERSION",
+						"value": "2",
+						"type": "default",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/vnd.company.app-v2+json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8082/spring-boot-user/user/produces",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"spring-boot-user",
+						"user",
+						"produces"
+					],
+					"query": [
+						{
+							"key": "version",
+							"value": "2",
+							"disabled": true
+						}
 					]
 				}
 			},
